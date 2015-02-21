@@ -1,0 +1,67 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+.form-group {
+    margin-bottom: 0px;
+}
+.alert {
+    margin-bottom: 10px;
+}
+.form-login {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-login .form-login-heading, .form-login .small-area {
+    margin-bottom: 10px;
+}
+.form-login .small-area {
+    margin-top: 10px;
+    font-weight: normal;
+}
+.small-area a {
+    text-align: center;
+}
+.form-login .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-login .form-control:focus {
+    z-index: 2;
+}
+.form-login .old {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-login .new {
+    border-radius: 0;
+    border-bottom: 0px none transparent;
+}
+.form-login .confirm {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.old-addon {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0px none transparent;
+}
+.new-addon {
+    border-radius: 0;
+    border-bottom: 0px none transparent;
+}
+.confirm-addon {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+a, a:hover{
+    color: inherit;
+}
