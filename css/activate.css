@@ -1,0 +1,7 @@
+.well {
+	text-align: center;
+}
+.link, .link:hover {
+	color: inherit;
+	font-weight: bold;
+}
