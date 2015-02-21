@@ -1,6 +1,10 @@
 <?php
 	/* SERVER */
+<<<<<<< HEAD
 	DEFINE("HOSTNAME", "ewsmith2000.github.oio");	// Hostname e.g. example.com
+=======
+	DEFINE("HOSTNAME", "ewsmith2000.github.io");	// Hostname e.g. example.com
+>>>>>>> v0.7
 	DEFINE("SITENAME", "LMS Beta");	// The site name e.g. My Awesome Site
 	DEFINE("WEBMASTER", "registration@localhost");	// Webmaster Contact Info
 	/* FILES */
