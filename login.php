@@ -54,6 +54,7 @@
                             }
                             else
                                 $error = "<div class='alert alert-danger role='alert'><strong>Uh-oh!</strong> We're sorry, but we were unable to query the database. Please try again later.</div>";
+                            $sql = null;
                         }
                         else {
                             $input_style = "has-error";
