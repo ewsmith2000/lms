@@ -30,7 +30,7 @@
                     if(file_exists(CONNECT_FILE)) {
                         require(CONNECT_FILE);
                         if($username && $password) {
-                            if($sql = $db->prepare("SELECT id, username, password, email, active FROM " . USERS_TABLE . " WHERE username=?")) {
+                            if($sql = $db->prepare("SELECT id, username, password, email, active, user_group FROM " . USERS_TABLE . " WHERE username=?")) {
                                 $sql->bindValue(1, $username, PDO::PARAM_STR);
                                 $sql->execute();
                                 $user = $sql->fetch();
@@ -38,6 +38,7 @@
                                     if($user["active"] == 1) {
                                         $_SESSION["id"] = $user["id"];
                                         $_SESSION["username"] = $user["username"];
+                                        $_SESSION["group"] = $user["group"];
                                         header("Location: http://" . HOSTNAME . DASH_FILE);
                                     }
                                     else {

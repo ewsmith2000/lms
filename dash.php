@@ -35,7 +35,7 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./profile.php?user=<?php echo $_SESSION['username']; ?>"><?php echo $_SESSION['username']; ?></a></li>
+                        <li><a href="./profile.php?user=<?php echo $_SESSION['username']; ?>"><?php echo $_SESSION["username"]; ?></a></li>
                         <li><a href="./logout.php">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
                     </ul>
                 </div>
@@ -82,7 +82,7 @@
                     <tbody>
                     	<?php
                     		foreach($users = $db->query("SELECT * FROM " . USERS_TABLE) as $user_row) {
-                    			echo "<tr><td>" . $user_row["id"] . "</td><td>" . $user_row["username"] . "</td><td>" . $user_row["email"] . "</td><td>" . $user_row["group"] . "</td><td>" . $user_row["active"] . "</td><td>" . $user_row["code"] . "</td></tr>";
+                    			echo "<tr><td>" . $user_row["id"] . "</td><td>" . $user_row["username"] . "</td><td>" . $user_row["email"] . "</td><td>" . $user_row["user_group"] . "</td><td>" . $user_row["active"] . "</td><td>" . $user_row["code"] . "</td></tr>";
                     		}
                     	?>
                     </tbody>
