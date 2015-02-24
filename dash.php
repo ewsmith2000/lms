@@ -65,7 +65,7 @@
                     $error = "<div class='alert alert-danger' role='alert'><strong>Uh-oh!</strong> We're sorry, but we were unable to locate the connection file. Please check the configuration file.</div>";;
                 }
                 require_once(CONNECT_FILE);
-                if($sql = $db->prepare("SELECT permssion FROM " . GROUPS_TABLE . " WHERE name=?")) {
+                if($sql = $db->prepare("SELECT permission FROM " . GROUPS_TABLE . " WHERE name=?")) {
                     $sql->bindValue(1, $_SESSION["group"], PDO::PARAM_STR);
                     if(!$sql->execute()) {
                         $error = "<div class='alert alert-danger' role='alert'><strong>Uh-oh!</strong> We're sorry, but we're unable to query the database. Please try again later.</div>";
