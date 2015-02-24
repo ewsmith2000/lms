@@ -60,18 +60,21 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h1 class="page-header">Dashboard</h1>
             <?php
+                $error = "";
                 if(!file_exists(CONNECT_FILE)) {
-                    echo "<div class='alert alert-danger'><strong>Uh-oh!</strong> We're sorry, but we were unable to locate the connection file. Please check the configuration file.</div>";;
+                    $error = "<div class='alert alert-danger' role='alert'><strong>Uh-oh!</strong> We're sorry, but we were unable to locate the connection file. Please check the configuration file.</div>";;
                 }
                 require_once(CONNECT_FILE);
-                if($sql = $db->prepare("SELECT permission FROM " . GROUPS_TABLE . " WHERE name=?")) {
+                if($sql = $db->prepare("SELECT permssion FROM " . GROUPS_TABLE . " WHERE name=?")) {
                     $sql->bindValue(1, $_SESSION["group"], PDO::PARAM_STR);
-                    $sql->execute();
-                    $permission = $sql->fetch();
+                    if(!$sql->execute()) {
+                        $error = "<div class='alert alert-danger' role='alert'><strong>Uh-oh!</strong> We're sorry, but we're unable to query the database. Please try again later.</div>";
+                    }
+                    $permission = $sql->fetch();   
                     $sql = null;
-                }
+                }                    
+                echo $error;
             ?>
-
             <h2 class="sub-header">Users</h2>
             <div class="table-responsive">
                 <table class="table table-hover">
