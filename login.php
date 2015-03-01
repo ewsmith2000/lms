@@ -38,7 +38,7 @@
                                     if($user["active"] == 1) {
                                         $_SESSION["id"] = $user["id"];
                                         $_SESSION["username"] = $user["username"];
-                                        $_SESSION["group"] = $user["group"];
+                                        $_SESSION["group"] = $user["user_group"];
                                         header("Location: http://" . HOSTNAME . DASH_FILE);
                                     }
                                     else {
