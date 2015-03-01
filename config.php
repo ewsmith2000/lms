@@ -1,6 +1,6 @@
 <?php
 	/* SERVER */
-	DEFINE("HOSTNAME", "ewsmith2000.github.io");	// Hostname e.g. example.com
+	DEFINE("HOSTNAME", "localhost");	// Hostname e.g. example.com
 	DEFINE("SITENAME", "LMS Beta");	// The site name e.g. My Awesome Site
 	DEFINE("WEBMASTER", "registration@localhost");	// Webmaster Contact Info
 	/* FILES */
@@ -23,4 +23,5 @@
 	DEFINE("REGISTRATION_EMAIL", "registration@localhost");	// Email used for sending activation codes
 	/* PREFERENCES */
 	DEFINE("UNIQUE_EMAIL", false);	// Require that emails can be used only once or not
+	const DASHBOARD_PERMISSIONS = array(0 => array("id", "username", "password", "email", "user_group", "active", "code", "date"), 1 => array("id", "username", "email", "user_group", "active", "code", "date"), 2 => array("id", "username", "user_group", "date"));
 ?>
