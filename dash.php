@@ -66,13 +66,13 @@
                 }
                 require_once(CONNECT_FILE);
                 if($sql = $db->prepare("SELECT permission FROM " . GROUPS_TABLE . " WHERE name=?")) {
-                    $sql->bindValue(1, $_SESSION["group"], PDO::PARAM_STR);
-                    if(!$sql->execute()) {
+                    if(!$sql->execute([$_SESSION["group"]])) {
                         $error = "<div class='alert alert-danger' role='alert'><strong>Uh-oh!</strong> We're sorry, but we're unable to query the database. Please try again later.</div>";
                     }
-                    $permission = $sql->fetch();   
+                    $permission_level = $sql->fetchColumn();   
                     $sql = null;
-                }                    
+                }
+                echo $permission_level;
                 echo $error;
             ?>
             <h2 class="sub-header">Users</h2>
