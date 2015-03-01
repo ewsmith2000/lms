@@ -2,7 +2,7 @@
 	/* SERVER */
 	DEFINE("HOSTNAME", "localhost");	// Hostname e.g. example.com
 	DEFINE("SITENAME", "LMS Beta");	// The site name e.g. My Awesome Site
-	DEFINE("WEBMASTER", "registration@localhost");	// Webmaster Contact Info
+	DEFINE("WEBMASTER", "webmaster@localhost");	// Webmaster Contact Info
 	/* FILES */
 	DEFINE("CONNECT_FILE", "connect.php");	// Database Connection File
 	DEFINE("LOGIN_FILE", "login.php");	// Login File
