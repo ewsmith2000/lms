@@ -72,7 +72,6 @@
                     $permission_level = $sql->fetchColumn();   
                     $sql = null;
                 }
-                echo $permission_level;
                 echo $error;
             ?>
             <h2 class="sub-header">Users</h2>
