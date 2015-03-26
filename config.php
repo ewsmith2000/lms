@@ -1,6 +1,6 @@
 <?php
 	/* SERVER */
-	DEFINE("HOSTNAME", "localhost");	// Hostname e.g. example.com
+	DEFINE("HOSTNAME", "localhost/");	// Hostname e.g. example.com
 	DEFINE("SITENAME", "LMS Beta");	// The site name e.g. My Awesome Site
 	DEFINE("WEBMASTER", "webmaster@localhost");	// Webmaster Contact Info
 	/* FILES */
@@ -24,4 +24,5 @@
 	/* PREFERENCES */
 	DEFINE("UNIQUE_EMAIL", false);	// Require that emails can be used only once or not
 	const DASHBOARD_PERMISSIONS = array(0 => array("id", "username", "password", "email", "user_group", "active", "code", "date"), 1 => array("id", "username", "email", "user_group", "active", "code", "date"), 2 => array("id", "username", "user_group", "date"));
+	const DASHBOARD_ALIASES = array(0 => array("ID", "Username", "Password", "Email", "Group", "Active", "Code", "Date"), 1 => array("ID", "username", "email", "Group", "Active", "Active", "Code", "Date"), 2 => array("ID", "Username", "Group", "Date"));
 ?>
